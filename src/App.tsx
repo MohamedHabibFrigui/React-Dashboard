@@ -2,6 +2,8 @@ import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Users from "./pages/users/Users";
 import Products from "./pages/products/Products";
+import User from "./pages/user/User";
+import Product from "./pages/product/Product";
 import Navbar from "./components/footer/Navbar";
 import Footer from "./components/navbar/Footer";
 import Menu from "./components/menu/Menu";
@@ -41,6 +43,14 @@ function App() {
         {
           path: "/products",
           element: <Products />,
+        },
+        {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
         },
       ],
     },
